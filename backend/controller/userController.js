@@ -4,6 +4,8 @@ import ErrorHandler from "../middlewares/error.js";
 import { generateToken } from "../utils/jwtToken.js";
 import cloudinary from "cloudinary";
 
+
+//i have added this just to commit changes in repo
 export const patientRegister = catchAsyncErrors(async (req, res, next) => {
   const { firstName, lastName, email, phone, nic, dob, gender, password } =
     req.body;
@@ -15,7 +17,9 @@ export const patientRegister = catchAsyncErrors(async (req, res, next) => {
     !nic ||
     !dob ||
     !gender ||
-    !password
+    !password ||
+    !pass
+
   ) {
     return next(new ErrorHandler("Please Fill Full Form!", 400));
   }
