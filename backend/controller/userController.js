@@ -18,7 +18,8 @@ export const patientRegister = catchAsyncErrors(async (req, res, next) => {
     !dob ||
     !gender ||
     !password ||
-    !pass
+    !pass ||
+    !helloooo
 
   ) {
     return next(new ErrorHandler("Please Fill Full Form!", 400));
